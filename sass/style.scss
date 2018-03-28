@@ -60,10 +60,13 @@
   height: calc(100vh - 40px);
 
   .carousel-item {
-    width: 1280px;
+    // width: 1280px;
     background-size: cover;
     position: relative;
-    bottom: 100px;
+    bottom: 500px;
+      .img{
+        width: 100%;
+      }
   }
 }
 .container_find{
@@ -81,7 +84,7 @@
   }
   .border_find{
     border-bottom: 3px solid rgb(187, 123, 137);
-    width: 300px;
+    width: 130px;
     margin: 0 auto;
   }
 }
@@ -100,9 +103,10 @@
     background-image: url("../images/img4.jpeg");
     background-repeat: no-repeat;
     background-size: contain;
-    -webkit-box-shadow: 10px 7px 29px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 7px 29px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 7px 29px 0 rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 9px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 9px 0 rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 9px 0 rgba(0,0,0,0.75);
+
     transition: all 0.5s ease-in-out;
 
     &:hover {
@@ -117,9 +121,9 @@
     background-image: url("../images/img3.jpeg");
     background-repeat: no-repeat;
     background-size: contain;
-    -webkit-box-shadow: 10px 7px 29px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 7px 29px 0 rgba(0,0,0,0.75);
-    box-shadow: 10px 7px 29px 0 rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 9px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 9px 0 rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 9px 0 rgba(0,0,0,0.75);
     transition: all 0.5s ease-in-out;
 
     &:hover {
@@ -153,10 +157,11 @@
 }
 
 .variant-silver {
-  background-color: rgb(140, 144, 140);
-  -webkit-box-shadow: 10px 7px 29px 0 rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 7px 29px 0 rgba(0,0,0,0.75);
-  box-shadow: 10px 7px 29px 0 rgba(0,0,0,0.75);
+  background-color: rgba(140, 144, 140, 0.28);
+  -webkit-box-shadow: 1px 3px 7px 0 rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 3px 7px 0 rgba(0,0,0,0.75);
+  box-shadow: 1px 3px 7px 0 rgba(0,0,0,0.75);
+  border-radius: 10px;
   width: 25%;
 
   .circle {
@@ -166,13 +171,15 @@
     border-radius: 50%;
     background-color: white;
     position: relative;
-    left: 106px;
+    left: 50%;
     top: -17px;
+    transform: translate(-50%);
   }
 
   .title {
     text-transform: uppercase;
     font-weight: bold;
+    font-size: $font-size18;
     text-align: center;
     padding: 10px 1px;
     color: white;
@@ -180,27 +187,31 @@
   }
 
   .price {
-    background-color: rgb(187, 123, 137);
-    border-radius: 50%;
-    font-size: 25px;
-    z-index: 10;
-    font-weight: bold;
-    border: 5px solid white;
-    width: 150px;
-    height: 150px;
-    text-align: center;
-    padding-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+        background: #355C7D;
+        background: -webkit-linear-gradient(left, #C06C84, #6C5B7B, #355C7D);
+        background: -o-linear-gradient(left, #C06C84, #6C5B7B, #355C7D);
+        background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+        border-radius: 50%;
+        font-size: $font-size25;
+        z-index: 10;
+        font-weight: bold;
+        border: 5px solid white;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        padding-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
 
-    p {
-      color: white;
-    }
-  }
+        p {
+          color: white;
+        }
+      }
 
   .variant-content {
     text-align: center;
+    font-size: $font-size16;
     padding: 5px;
     color: white;
   }
@@ -216,7 +227,7 @@
 
 .container_form_split {
   padding: 0 10px;
-  font-size: 14px;
+  font-size: $font-size14;
 
 
   .split-left {
@@ -241,7 +252,7 @@
 }
 .adress{
   padding-left: 60px;
-  font-size: 14px;
+  font-size: $font-size14;
 }
 
 input[type=text],
@@ -251,11 +262,10 @@ textarea {
   padding: 12px;
   border: 3px solid rgba(187, 125, 139, 0.3);
   border-radius: 4px;
+  resize: none;
   box-sizing: border-box;
-  /* Make sure that padding and width stays in place */
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical;
 }
 
 input[type=submit] {
@@ -276,12 +286,12 @@ input[type=submit]:hover {
 }
 .footer-copyright {
   float: left;
-  font-size: 12px;
+  font-size: $font-size12;
 }
 
 .footer-logo {
   float: right;
-  font-size: 14px;
+  font-size: $font-size14;
   text-transform: uppercase;
   margin-left: 65px;
   span {
@@ -290,7 +300,8 @@ input[type=submit]:hover {
 }
 
 .footer-social-icons {
-  float: right;
+  text-align: left;
+  margin-left: 50px;
   a {
     margin-left: 7px;
   }
@@ -299,21 +310,21 @@ input[type=submit]:hover {
 .icon-facebook:before {
   content: "\ea90";
   color: $color-pink;
-  font-size: 20px;
+  font-size: $font-size20;
 }
 .icon-tumblr:before {
   content: "\eab9";
   color: $color-pink;
-  font-size: 20px;
+  font-size: $font-size20;
 }
 .icon-twitter:before {
   content: "\ea96";
   color: $color-pink;
-  font-size: 20px;
+  font-size: $font-size20;
 }
 .icon-pinterest:before {
   content: "\ead1";
   color: $color-pink;
-  font-size: 20px;
+  font-size: $font-size20;
 
 }
